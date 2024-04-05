@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Uploadmanager;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,5 @@ Route::post('/product/insert',[AuthController::class,'insertProductsPost'])->nam
 Route::post('/product/update',[AuthController::class,'updateProductsPost'])->name('products.update.post');
 
 Route::get('/product/delete/{slug}',[AuthController::class,'deleteProduct'])->name('products.delete.get');
+
+Route::post('/upload',[Uploadmanager::class,'uploadFile'])->name('file.upload');

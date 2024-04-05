@@ -1,4 +1,5 @@
-<ul>
+<!-- For Crud Operation -->
+<!-- <ul>
     @foreach($errors->all() as $error)
       <li>{{$error}}</li>
     @endforeach
@@ -11,4 +12,11 @@
     <input type="number" name="price" value="{{old("price")}}"><br><br>
     <input type="date" name="date" ><br><br>
     <button type="submit">Submit</button>
+</form> -->
+
+<!-- For file Uploading -->
+<form action="{{route('file.upload')}}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <input type="file" name="fileUpload"><br><br>
+    <button type="submit">Upload</button>
 </form>
